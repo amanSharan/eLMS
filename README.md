@@ -20,6 +20,26 @@ A learning management and online assessment system for academic education.
 3. jQuery 3.6.0
 4. Chart.js v3.9.1
 5. Animate.css 4.1.1
+Clone the project
+git clone https://github.com/nz-m/eLMS-SWE.git
+Go to the project directory
+cd eLMS-SWE
+Create a virtual environment and activate it (Windows)
+python -m venv env
+env\Scripts\activate
+Install dependencies
+pip install -r requirements.txt
+Note: If you're using newer versions of python(3.10+), you may need to add the --use-deprecated=legacy-resolver option when installing dependencies with pip to avoid errors :
+
+pip install -r requirements.txt --use-deprecated=legacy-resolver
+Make migrations and migrate
+python manage.py makemigrations
+python manage.py migrate
+Create admin/superuser
+python manage.py createsuperuser
+Finally run the project
+python manage.py runserver
+Now the project should be running on http://127.0.0.1:8000/
 
 ## UI
 
